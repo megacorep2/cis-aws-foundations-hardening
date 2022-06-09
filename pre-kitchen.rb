@@ -24,7 +24,7 @@ my_vars.each do |value|
 end
 
 puts "If you want to get JSON output, please set the USE_JSON = 'true'"
-
+puts "TF_VAR_aws_ssh_key_id' = test1212s"
 puts ''
 puts '----------'
 puts 'You are OK to run Test Kitchen' if @run_kitchen == true
@@ -34,6 +34,8 @@ require 'rubygems'; require 'json';
 
 
 my_vpcs =  JSON.parse(%x[aws ec2 describe-vpcs]);
+
+TF_VAR_aws_access_key = test1234
 
 
 re = Regexp.union('false')
